@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio5.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Libreria ACME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca ACME</h1>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Añadir libro</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Libro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Url de la imagen:</label>
+                        <input type="text" class="form-control" id="linkLib">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Titulo:</label>
+                        <input type="text" class="form-control" id="titLib">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Autor:</label>
+                        <input type="text" class="form-control" id="autLib">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Año de publicación:</label>
+                        <input type="number" class="form-control" id="anioLib">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="aniaLib">Añadir libro</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+    <img src="libreria/pexels-arturo-añez-15126846 (1).jpg" alt="Imagen Principal" class="imgPrincipal">
+    <main>
+        <div class="cont">
+            <div class="lateral">
+                <h3>Ordenar por</h3>
+                <div class="contRadio">
+                    <label for="ord1">Titulo</label>
+                    <input type="radio" name="ord1">
+                </div>
+                <div class="contRadio">
+                    <label for="ord1">Autor</label>
+                    <input type="radio" name="ord1">
+                </div>
+                <div class="contRadio">
+                    <label for="ord1">Estado</label>
+                    <input type="radio" name="ord1">
+                </div>
+            </div>
+            <div id="biblio">
+                <div class="libro">
+                    <img src="libreria/la oscurdiad de los colores.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">La oscuridad de los colores</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://www.rae.es/sites/default/files/portada_cien_anos_de_soledad_0.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Cien años de soledad</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://www.elquintolibro.es/wp-content/uploads/2020/07/71ziI-BLDSL.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Dracula</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://images.cdn1.buscalibre.com/fit-in/520x520/c1/8c/c18cdeb80fa6f9a212a1cc5639e94c6d.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Un mundo feliz</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://image.cdn1.buscalibre.com/60e395d68463b5f3158bf472.__RS360x360__.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Angosta</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/27/b9/27b9bf742d74cb89453f991ad3f219ae.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Mañana moriras</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://www.crisol.com.pe/media/catalog/product/cache/f6d2c62455a42b0d712f6c919e880845/9/7/9788415999812_jt6edcxzi8av2ykv.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Corazón</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+                <div class="libro">
+                    <img src="https://cdn.agapea.com/B-Ediciones-B-/SOMBRA-NOCTURNA-i1n2182217.jpg" alt="" class="imgLibro">
+                    <h1 class="titLibro">Sombra nocturna</h1>
+                    <div>
+                    <button class="btnLibro">Ver mas</button>
+                    </div>
+                    <button class="btnLibro">Eliminar</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="ejercicio5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
