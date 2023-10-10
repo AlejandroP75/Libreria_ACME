@@ -97,6 +97,9 @@ function actualizar(){
 }
 
 function cargar(){
+    setRadio('ord', 'o1');
+    libros.sort((x, y) => x.titulo.localeCompare(y.titulo));
+
     for(let i = 0; i < libros.length; i++){
         let contenedor = document.createElement("div");
         contenedor.setAttribute("class", "libro");
@@ -116,6 +119,15 @@ function cargar(){
     }
 
 }
-botAniadir.addEventListener("click", añadirLibro);
 
+function setRadio(name, value) {
+    document.querySelectorAll(`input[name="${name}"]`).forEach(element => {
+        if(element.value === value) {
+            element.checked = true;
+        }
+    });
+}
+
+
+botAniadir.addEventListener("click", añadirLibro);
 window.addEventListener("load", cargar);

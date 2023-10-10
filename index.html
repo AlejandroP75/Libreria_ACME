@@ -24,19 +24,19 @@
                 <div class="modal-body">
                     <form>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Url de la imagen:</label>
+                        <label for="linkLib" class="col-form-label">Url de la imagen:</label>
                         <input type="text" class="form-control" id="linkLib">
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Titulo:</label>
+                        <label for="titLib" class="col-form-label">Titulo:</label>
                         <input type="text" class="form-control" id="titLib">
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Autor:</label>
+                        <label for="autLib" class="col-form-label">Autor:</label>
                         <input type="text" class="form-control" id="autLib">
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Año de publicación:</label>
+                        <label for="anioLib" class="col-form-label">Año de publicación:</label>
                         <input type="number" class="form-control" id="anioLib">
                     </div>
                     </form>
@@ -56,16 +56,16 @@
             <div class="lateral">
                 <h3>Ordenar por</h3>
                 <div class="contRadio">
-                    <label for="ord1">Titulo</label>
-                    <input type="radio" name="ord1">
+                    <p>Titulo</p>
+                    <input type="radio" name="ord" value="o1" id="o1">
                 </div>
                 <div class="contRadio">
-                    <label for="ord1">Autor</label>
-                    <input type="radio" name="ord1">
+                    <p>Autor</p>
+                    <input type="radio" name="ord" value="o2" id="o2">
                 </div>
                 <div class="contRadio">
-                    <label for="ord1">Estado</label>
-                    <input type="radio" name="ord1">
+                    <p>Estado</p>
+                    <input type="radio" name="ord" value="o3" id="o3">
                 </div>
             </div>
             <div id="biblio"></div>
