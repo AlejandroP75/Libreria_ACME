@@ -116,13 +116,11 @@ function organizar(){
 }
 
 function verMas(id) {
-    const libro = libros[id];
     const modal = document.getElementById("myModal");
     const modalContent = document.getElementById("modalContent");
   
-    modalContent.textContent = `Título: ${libro.titulo}\nAutor: ${libro.autor}\nAño: ${libro.año}\nEstado: ${libro.estado}\nPrestado a: ${libro.prestadoA}`;
-  
-
+    modalContent.innerHTML = "<h1>"+ libros[id].titulo +"<br></h1><img src='"+ libros[id].img +"' alt='portada'><br><h3>Autor: "+ libros[id].autor +"</h3><h3>Año: "+ libros[id].año +"</h3><h3>Estado: "+ libros[id].estado +"</h3><h3>Prestado A: "+ libros[id].prestadoA +"</h3>";
+    modal.style.display = "block";
   }
   
   function cerrarModal() {
