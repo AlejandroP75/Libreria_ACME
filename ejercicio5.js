@@ -6,6 +6,7 @@ let botAniadir = document.getElementById("aniaLib");
 let botOrden = document.getElementById("botOrden");
 let radio = document.getElementsByName("ord");
 let form = document.getElementById("biblio");
+let bodys = document.getElementsByTagName("body");
 let libros = [];
 
 libros.push({
@@ -91,11 +92,11 @@ function cargar(){
         portadaE.setAttribute("width", "200px");
         portadaE.setAttribute("height", "200px");
         let textE = document.createElement("p");
-        let disponible = '<button class="btnLibro">Prestar</button>';
+        let disponible = '<button class="btnLibro" onclick="prestar(' + i + ')">Prestar</button>';
         if ( libros[i]["estado"]== "Prestado"){
-            disponible = '<button class="btnLibro">Devolver</button>';
+            disponible = '<button class="btnLibro" onclick="devolver(' + i + ')">Devolver</button>';
         }
-        textE.innerHTML = '<h1 class="titLibro">' + libros[i]["titulo"] + '</h1><div class = "botones"><div><button class="btnLibro">Ver mas</button>' + disponible + '</div><button class="btnLibro">Eliminar</button></div>';
+        textE.innerHTML = '<h1 class="titLibro">' + libros[i]["titulo"] + '</h1><div class = "botones"><div><button class="btnLibro" onclick="verMas(' + i + ')">Ver mas</button>' + disponible + '</div><button class="btnLibro" onclick="eliminar(' + i + ')">Eliminar</button></div>';
         form.appendChild(contenedor);
         contenedor.appendChild(portadaE);
         contenedor.appendChild(textE); 
@@ -111,6 +112,39 @@ function organizar(){
     }else{
         console.log("Error");
     }
+    cargar();
+}
+
+function verMas(id) {
+    const libro = libros[id];
+    const modal = document.getElementById("myModal");
+    const modalContent = document.getElementById("modalContent");
+  
+    modalContent.textContent = `Título: ${libro.titulo}\nAutor: ${libro.autor}\nAño: ${libro.año}\nEstado: ${libro.estado}\nPrestado a: ${libro.prestadoA}`;
+  
+
+  }
+  
+  function cerrarModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+
+function prestar(id){
+    let aPersona = prompt("Ingrese el nombre de la persona a la que se va a prestar el libro: ");
+    libros[id].estado = "Prestado";
+    libros[id].prestadoA = aPersona;
+    cargar();
+}
+
+function devolver(id){
+    libros[id].estado = "Disponible";
+    libros[id].prestadoA = "";
+    cargar();
+}
+
+function eliminar(id){
+    libros.splice(id, 1);
     cargar();
 }
 
